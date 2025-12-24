@@ -9,30 +9,32 @@
 
 <body>
 
-  <!-- Snow Animation -->
+  <!-- Snow -->
   <div class="snow"></div>
 
-  <!-- Step 1 -->
+  <!-- Fireworks canvas -->
+  <canvas id="fireworks"></canvas>
+
+  <!-- Step 1: Name input -->
   <div class="container" id="step1">
-    <h1 class="fade-text">For someone special 🎄</h1>
+    <h1>🎄 Christmas Surprise 🎁</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="goNext()">Continue</button>
   </div>
 
   <!-- Step 2 -->
   <div class="card hidden" id="step2">
     <img src="snowman.png" alt="Snowman">
-    <h2>
-      This Christmas,<br>
-      something special for you
-    </h2>
+    <h2 id="personalText"></h2>
     <button onclick="openMessage()">Open 🎁</button>
   </div>
 
   <!-- Step 3 -->
   <div class="message hidden" id="step3">
-    <h2>Merry Christmas ❤️</h2>
+    <h2 id="finalName"></h2>
     <p>
       This Christmas, I just want you to know how special you are to me.
-      You are not just a part of my life, you are the reason behind my smile.
+      You are the reason behind my smile ❤️
     </p>
     <img src="santa.png" alt="Santa">
   </div>
