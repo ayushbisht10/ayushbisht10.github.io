@@ -9,25 +9,32 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f7f7f7,
+    #eeeeee
+  );
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffeaa7;
+  color: #f1c40f; /* soft yellow text */
   overflow: hidden;
   text-align: center;
 }
+
 
 /* Snow */
 .snow {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: radial-gradient(white 1px, transparent 1px);
-  background-size: 20px 20px;
-  animation: snowMove 12s linear infinite;
-  opacity: 0.4;
+  background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px);
+  background-size: 18px 18px;
+  animation: snowMove 14s linear infinite;
+  opacity: 0.6;
 }
+
 
 @keyframes snowMove {
   from { background-position: 0 0; }
@@ -58,15 +65,16 @@ body {
 
 /* Cards */
 .container, .card, .message {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 25px;
   width: 90%;
   max-width: 380px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   animation: fadeIn 1s ease forwards;
 }
+
 
 h1, h2 {
   margin-bottom: 15px;
