@@ -48,22 +48,39 @@ function animateFireworks() {
 animateFireworks();
 
 function goNext() {
-  const name = document.getElementById("nameInput").value || "Someone Special";
+  const name = "Kashish";
+
   document.getElementById("personalText").innerText =
     `Hey ${name} 🎄 Something special for you`;
+
   document.getElementById("finalName").innerText =
     `Merry Christmas ${name} ❤️`;
 
+  fullMessage = `
+This Christmas, I just want you to know how incredibly special you are to me.
+
+You are not just a name or a moment in my life — you are someone who brings warmth,
+happiness, and meaning into my days.
+
+I may not always say everything perfectly, but I want you to know this from the
+bottom of my heart: I am here for you, and I will always stand by you — no matter what.
+
+For now, this little website is all I could create for you as a Christmas gift.
+Your real gift is still pending… and I promise, it will be worth the wait.
+
+Kashish, you are incredibly pretty — not just by the way you look, but by the way
+you think, feel, and care. You are strong, even on the days you don’t realize it.
+
+Please always keep smiling, keep believing in yourself, and keep being the beautiful
+person that you are. I hope you never forget how amazing you truly are — because I see
+it every single day.
+
+No matter where life takes us, you’ll always have someone who cares for you deeply
+and wishes you happiness, peace, and endless reasons to smile.
+
+Merry Christmas once again ❤️
+  `;
+
   document.getElementById("step1").classList.add("hidden");
   document.getElementById("step2").classList.remove("hidden");
-}
-
-function openMessage() {
-  document.getElementById("step2").classList.add("hidden");
-  document.getElementById("step3").classList.remove("hidden");
-
-  // Fireworks burst
-  for (let i = 0; i < 6; i++) {
-    setTimeout(createFirework, i * 300);
-  }
 }
