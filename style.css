@@ -21,46 +21,49 @@ body {
 /* Snow */
 .snow {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   pointer-events: none;
   background-image: radial-gradient(white 1px, transparent 1px);
   background-size: 20px 20px;
   animation: snowMove 10s linear infinite;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 @keyframes snowMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 0 100vh; }
+  from { background-position: 0 0; }
+  to { background-position: 0 100vh; }
 }
 
-/* Main container */
+/* Fireworks canvas */
+#fireworks {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Cards */
 .container, .card, .message {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 25px;
   width: 90%;
-  max-width: 350px;
+  max-width: 360px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  animation: fadeIn 1.2s ease forwards;
+  animation: fadeIn 1s ease forwards;
 }
 
-/* Text */
-h1, h2 {
-  margin-bottom: 15px;
-  font-weight: 600;
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  margin: 15px 0;
+  text-align: center;
+  font-size: 16px;
 }
 
-p {
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* Images */
 img {
   width: 150px;
   margin: 15px 0;
@@ -68,41 +71,24 @@ img {
 }
 
 @keyframes float {
-  0%,100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
 }
 
-/* Button */
 button {
-  margin-top: 15px;
   padding: 12px 25px;
-  border: none;
   border-radius: 30px;
+  border: none;
   background: linear-gradient(135deg, #ff512f, #dd2476);
-  color: white;
+  color: #fff;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-/* Hidden */
 .hidden {
   display: none;
 }
 
-/* Animations */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
