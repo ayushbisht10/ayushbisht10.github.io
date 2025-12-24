@@ -66,7 +66,7 @@ I may not always say everything perfectly, but I want you to know this from the
 bottom of my heart: I am here for you, and I will always stand by you — no matter what.
 
 For now, this little website is all I could create for you as a Christmas gift.
-Your real gift is still pending… and I promise, it will be worth the wait.
+Your real gift is still pending..i hope you will like it.😭😋
 
 Kashish, you are incredibly pretty — not just by the way you look, but by the way
 you think, feel, and care. You are strong, even on the days you don’t realize it.
@@ -99,6 +99,7 @@ function openMessage() {
 function typeText() {
   const container = document.getElementById("typingText");
   const cursor = document.getElementById("cursor");
+
   container.innerHTML = "";
   container.appendChild(cursor);
 
@@ -110,22 +111,22 @@ function typeText() {
 
       if (char === "\n") {
         container.insertBefore(document.createElement("br"), cursor);
-        container.insertBefore(document.createElement("br"), cursor);
       } else {
         container.insertBefore(document.createTextNode(char), cursor);
       }
 
       i++;
-      setTimeout(typing, 70); // ⏳ slow typing speed
+      setTimeout(typing, 65); // slow but smooth
     }
   }
 
   typing();
 }
+
 function createFlower() {
   const flower = document.createElement("div");
   flower.className = "flower";
-  flower.innerText = ["🌸","🌼","🌺","💮"][Math.floor(Math.random()*4)];
+  flower.innerText = ["🌸","🌻","🌺","🌷"][Math.floor(Math.random()*4)];
   flower.style.left = Math.random() * 100 + "vw";
   flower.style.animationDuration = 8 + Math.random() * 5 + "s";
   document.body.appendChild(flower);
