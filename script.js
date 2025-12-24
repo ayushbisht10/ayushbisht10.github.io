@@ -84,3 +84,32 @@ Merry Christmas once again ❤️
   document.getElementById("step1").classList.add("hidden");
   document.getElementById("step2").classList.remove("hidden");
 }
+function openMessage() {
+  document.getElementById("step2").classList.add("hidden");
+  document.getElementById("step3").classList.remove("hidden");
+
+  typeText();
+
+  for (let i = 0; i < 6; i++) {
+    setTimeout(createFirework, i * 300);
+  }
+}
+
+/* Typing animation */
+function typeText() {
+  const container = document.getElementById("typingText");
+  container.innerHTML = "";
+  let i = 0;
+
+  function typing() {
+    if (i < fullMessage.length) {
+      container.innerHTML += fullMessage.charAt(i) === "\n"
+        ? "<br><br>"
+        : fullMessage.charAt(i);
+      i++;
+      setTimeout(typing, 35); // typing speed
+    }
+  }
+
+  typing();
+}
