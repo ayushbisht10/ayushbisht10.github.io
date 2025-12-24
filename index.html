@@ -18,8 +18,7 @@
   <!-- Step 1: Name input -->
   <div class="container" id="step1">
     <h1>🎄 Christmas Surprise 🎁</h1>
-    <input type="text" id="nameInput" placeholder="Enter your name">
-    <button onclick="goNext()">Continue</button>
+    <button onclick="goNext()">Open your surprise ❤️</button>
   </div>
 
   <!-- Step 2 -->
@@ -31,13 +30,15 @@
 
   <!-- Step 3 -->
   <div class="message hidden" id="step3">
-    <h2 id="finalName"></h2>
-    <p>
-      This Christmas, I just want you to know how special you are to me.
-      You are the reason behind my smile ❤️
-    </p>
-    <img src="santa.png" alt="Santa">
-  </div>
+  <h2 id="finalName"></h2>
+
+  <!-- Typing text container -->
+  <div id="typingText"></div>
+
+  <img src="santa.png" alt="Santa">
+</div>
+
+
 
   <script src="script.js"></script>
 </body>
