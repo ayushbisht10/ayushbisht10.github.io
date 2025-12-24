@@ -15,9 +15,6 @@ body {
     #81d4fa,
     #4fc3f7
   );
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* important */
   color: #f1c40f;
   overflow-y: auto; /* ✅ scroll allowed */
   overflow-x: hidden;
